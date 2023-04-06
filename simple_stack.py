@@ -16,7 +16,7 @@ class Stack:
     
     def pop(self):
         if len(self._stack) <= 0:
-            return('Stack empty!')
+            return 'Stack empty!'
         
         return self._stack.pop()
     
