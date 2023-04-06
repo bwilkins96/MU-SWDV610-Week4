@@ -26,7 +26,6 @@ class Queue:
 
         if self.is_empty():
             self._head = new_node
-            self._head._next = new_node
         else:
             self._tail._next = new_node
 
