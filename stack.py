@@ -26,7 +26,7 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            return False
+            return None
         
         answer = self._head._element
         self._head = self._head._next
@@ -36,7 +36,7 @@ class Stack:
     
     def top(self):
         if self.is_empty():
-            return False
+            return None
         
         return self._head._element
     
