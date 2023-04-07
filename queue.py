@@ -11,17 +11,21 @@ class Queue:
             self._next = next
 
     def __init__(self):
+        """Initializes an empty queue"""
         self._head = None
         self._tail = None
         self._size = 0
 
     def size(self):
+        """Returns the size of the queue"""
         return self._size
     
     def is_empty(self):
+        """Returns whether the queue is empty"""
         return self.size() == 0
     
     def enqueue(self, element):
+        """Adds a node containing the element to the tail of the queue"""
         new_node = self._Node(element)
 
         if self.is_empty():
@@ -33,6 +37,7 @@ class Queue:
         self._size += 1
 
     def dequeue(self):
+        """Returns the element in the head node and removes the node"""
         if self.is_empty():
             return None
         
@@ -47,6 +52,7 @@ class Queue:
         return answer
     
     def front(self):
+        """Returns the element in the head node without removing the node"""
         if self.is_empty():
             return None
         

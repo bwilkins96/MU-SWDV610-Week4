@@ -11,20 +11,25 @@ class Stack:
             self._next = next
 
     def __init__(self):
+        """Initializes an empty stack"""
         self._head = None
         self._size = 0
 
     def size(self):
+        """Returns the size of the stack"""
         return self._size
     
     def is_empty(self):
+        """Returns whether the stack is empty"""
         return self.size() == 0
 
     def push(self, element):
+        """Pushes a node cotaining the element onto the head of the stack"""
         self._head = self._Node(element, self._head)
         self._size += 1
 
     def pop(self):
+        """Returns the top element and removes its node from the stack"""
         if self.is_empty():
             return None
         
@@ -35,6 +40,7 @@ class Stack:
         return answer
     
     def top(self):
+        """Returns the top element without removing its node"""
         if self.is_empty():
             return None
         

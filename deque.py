@@ -12,17 +12,21 @@ class Deque:
             self._prev = prev
 
     def __init__(self):
+        """Initializes an empty deque"""
         self._head = None
         self._tail = None
         self._size = 0
 
     def size(self):
+        """Returns the size of the deque"""
         return self._size
     
     def is_empty(self):
+        """Returns whether the deque is empty"""
         return self.size() == 0
     
     def add_front(self, element):
+        """Adds a node containing the element to the head of the deque"""
         new_node = self._Node(element, self._head)
 
         if self.is_empty():
@@ -34,6 +38,7 @@ class Deque:
         self._size += 1
 
     def add_rear(self, element):
+        """Adds a node containing the element to the tail of the deque"""
         new_node = self._Node(element)
 
         if self.is_empty():
@@ -46,6 +51,7 @@ class Deque:
         self._size += 1
 
     def pop_front(self):
+        """Returns the element in the head node and removes the node"""
         if self.is_empty():
             return None
         
@@ -61,6 +67,7 @@ class Deque:
         return answer
 
     def pop_rear(self):
+        """Returns the element in the tail node and removes the node"""
         if self.is_empty():
             return None
         
@@ -76,18 +83,21 @@ class Deque:
         return answer
 
     def front(self):
+        """Returns the element in the head node without removing the node"""
         if self.is_empty():
             return None
         
         return self._head._element
 
     def rear(self):
+        """Returns the element in the tail node without removing the node"""
         if self.is_empty():
             return None
         
         return self._tail._element
     
     def print_deque(self):
+        """Prints the elements in the deque, in forward order"""
         current = self._head
 
         while current:
@@ -98,6 +108,7 @@ class Deque:
         print()
 
     def print_deque_reverse(self):
+        """Prints the elements in the deque, in reverse order"""
         current = self._tail
         
         while current:
