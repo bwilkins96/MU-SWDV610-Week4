@@ -39,13 +39,12 @@ class Deque:
 
     def add_rear(self, element):
         """Adds a node containing the element to the tail of the deque"""
-        new_node = self._Node(element)
+        new_node = self._Node(element, None, self._tail)
 
         if self.is_empty():
             self._head = new_node
         else:
             self._tail._next = new_node
-            new_node._prev = self._tail
 
         self._tail = new_node
         self._size += 1

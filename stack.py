@@ -60,4 +60,4 @@ if __name__ == '__main__':
     print(s.pop())                  # -> 27
     print(s.pop())                  # -> 8
     print(s.pop())                  # -> 7
-    print(s.pop())                  # -> False
+    print(s.pop())                  # -> None
