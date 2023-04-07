@@ -91,8 +91,9 @@ class Deque:
         current = self._head
 
         while current:
-            print(current._element, end = ' ')
+            print(current._element, end='')
             current = current._next
+            if current: print(', ', end='')
         
         print()
 
@@ -100,8 +101,9 @@ class Deque:
         current = self._tail
         
         while current:
-            print(current._element, end = ' ')
+            print(current._element, end='')
             current = current._prev
+            if current: print(', ', end='')
         
         print()
 
@@ -112,8 +114,8 @@ if __name__ == '__main__':
     d.add_rear('A')
     d.add_rear('B')
 
-    d.print_deque()                  # -> 2 1 A B
-    d.print_deque_reverse()          # -> B A 1 2
+    d.print_deque()                  # -> 2, 1, A, B
+    d.print_deque_reverse()          # -> B, A, 1, 2
     print('size:', d.size())         # -> 4
     print('front:', d.front())       # -> 2
     print('rear:', d.rear(), '\n')   # -> B
